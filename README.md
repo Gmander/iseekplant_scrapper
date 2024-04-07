@@ -20,6 +20,7 @@
 - If you have already run the scrapper and would like to update any addresses that are showing up as 'N/A', perform the following steps
    - Running this will look through all companies in your current csv/json and research all that have a 'N/A' in the address field
    - Some addresses show up as 'N/A' when scrapping more than 5 pages at a time.
+   - This will run recursively until there are less addresses with 'N/A' than min_accepted_blanks. Keep this in mind with larger collections of data where the chances of actual blank addresses are possible.
 1. Build the image if you have not already following instructions above
 2. Navigate to directory with script in terminal
 3. Run the script with your path to pwd and 'recursive_update' as <arg_1> and your desired min_accepted_blanks (as discussed above) as <arg_2>
