@@ -17,5 +17,5 @@ EXPOSE 80
 ENV NAME World
 
 # Run app.py when the container launches
-CMD ["python", "./console_i_seek_plant_scrapper.py"]
+CMD ["python", "./isp_scrapper.py"]
 
