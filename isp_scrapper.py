@@ -262,8 +262,12 @@ def main(genre, start_page, end_page, min_acceptable_blanks, clear_output):
 
 if __name__ == "__main__":
     genre_arg = sys.argv[1]
-    start_page_arg = int(sys.argv[2])
-    end_page_arg = int(sys.argv[3])
-    min_acceptable_blanks_arg = int(sys.argv[4])
-    clear_output_arg = sys.argv[5].lower() == 'true'
-    main(genre_arg, start_page_arg, end_page_arg, min_acceptable_blanks_arg, clear_output_arg)
+    if genre_arg == 'recursive_update':
+        min_acceptable_blanks_arg = int(sys.argv[2])
+        recursive_update(min_acceptable_blanks_arg)
+    else:
+        start_page_arg = int(sys.argv[2])
+        end_page_arg = int(sys.argv[3])
+        min_acceptable_blanks_arg = int(sys.argv[4])
+        clear_output_arg = sys.argv[5].lower() == 'true'
+        main(genre_arg, start_page_arg, end_page_arg, min_acceptable_blanks_arg, clear_output_arg)
